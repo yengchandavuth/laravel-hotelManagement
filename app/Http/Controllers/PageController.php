@@ -54,4 +54,20 @@ class PageController extends Controller {
 
         return redirect()->route('profile');
     }
+
+    public function showRoom($id)
+    {
+    $room = Room::with('roomtype')->findOrFail($id);
+    return view('sections.room-detail', compact('room'));
+    }
+
+    public function show(Room $room)
+    {
+        $booking = request()->query('booking', false);
+
+        return view('rooms.show', [
+            'room' => $room,
+            'booking' => $booking
+        ]);
+    }
 }

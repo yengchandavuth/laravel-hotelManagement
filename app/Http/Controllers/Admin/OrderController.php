@@ -30,9 +30,23 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'check_in' => 'required|date|after:today',
+            'check_out' => 'required|date|after:check_in',
+            'room_id' => 'required|exists:rooms,id',
+        ]);
 
+        Order::create([
+            'room_id' => $request->room_id,
+            'user_id' => auth()->id(),
+            'check_in' => $request->check_in,
+            'check_out' => $request->check_out
+        ]);
+
+        return redirect()
+            ->route('rooms.index')
+            ->with('success', 'You successfully booked the room!');
+    }
     /**
      * Display the specified resource.
      */

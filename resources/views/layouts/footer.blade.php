@@ -6,7 +6,7 @@
                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Address</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+123 456 789</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>starhotel@example.com</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>group4@example.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

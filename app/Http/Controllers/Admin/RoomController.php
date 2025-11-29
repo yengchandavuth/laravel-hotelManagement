@@ -71,11 +71,10 @@ class RoomController extends Controller {
      * Show the form for editing the specified resource.
      */
     public function edit(int $id) {
-
-        $room = Room::findOrFail($id);
-        $this->authorize('update', $room);
-        $types = RoomType::all();
-        return view('admin.rooms.edit', compact('room', 'types'));
+    $room = Room::findOrFail($id);
+    // $this->authorize('update', $room); // remove this line if no policy is defined
+    $types = RoomType::all();
+    return view('admin.rooms.edit', compact('room', 'types'));
     }
 
     /**

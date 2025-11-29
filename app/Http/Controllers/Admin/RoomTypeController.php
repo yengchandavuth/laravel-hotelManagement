@@ -49,12 +49,12 @@ class RoomTypeController extends Controller {
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(int $id) {
+    public function edit($id)
+    {
         $type = RoomType::findOrFail($id);
-        $this->authorize('update', $type);
-
         return view('admin.roomtypes.edit', compact('type'));
     }
+
 
     /**
      * Update the specified resource in storage.

@@ -33,7 +33,7 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                     {{ Auth::user()->name }}</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="{{ route('orders.index') }}" class="dropdown-item">My Bookings</a>
+                                    <!-- <a href="{{ route('orders.index') }}" class="dropdown-item">My Bookings</a> -->
                                     <a href="{{ route('profile') }}" class="dropdown-item">My Profile</a>
                                     <form method="post" action="{{ route('logout') }}">
                                         @csrf

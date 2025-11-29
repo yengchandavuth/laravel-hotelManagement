@@ -64,8 +64,6 @@
             </div>
         </div>
     </div>
-    <!-- Newsletter -->
-    @include('sections.newsletter')
 @endsection
 
 @section('footer')

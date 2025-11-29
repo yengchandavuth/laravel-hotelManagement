@@ -1,88 +1,45 @@
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-            <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+        <!-- Section Header -->
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-primary text-uppercase fw-bold">Our Services</h6>
+            <h1 class="mb-0">Explore Our <span class="text-primary">Services</span></h1>
         </div>
+
+        <!-- Services Grid -->
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-hotel fa-2x text-primary"></i>
+            @php
+                $services = [
+                    ['icon' => 'fa-hotel', 'title' => 'Rooms & Apartments', 'desc' => 'Comfortable and luxurious rooms designed for your perfect stay.'],
+                    ['icon' => 'fa-utensils', 'title' => 'Food & Restaurant', 'desc' => 'Delicious cuisines and fine dining experiences.'],
+                    ['icon' => 'fa-spa', 'title' => 'Spa & Fitness', 'desc' => 'Relax, rejuvenate, and stay fit during your stay.'],
+                    ['icon' => 'fa-swimmer', 'title' => 'Sports & Gaming', 'desc' => 'Fun activities and games for everyone.'],
+                    ['icon' => 'fa-glass-cheers', 'title' => 'Event & Party', 'desc' => 'Celebrate special occasions with style.'],
+                    ['icon' => 'fa-dumbbell', 'title' => 'Gym & Yoga', 'desc' => 'Stay active and healthy with our facilities.'],
+                ];
+            @endphp
+
+            @foreach($services as $index => $service)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ 0.1 * ($index + 1) }}s">
+                    <a class="service-item d-block text-decoration-none rounded shadow-sm p-4 h-100 border border-light hover-shadow" href="#">
+                        <div class="service-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <i class="fa {{ $service['icon'] }} fa-2x"></i>
                         </div>
-                    </div>
-                    <h5 class="mb-3">Rooms & Appartment</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-utensils fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Food & Restaurant</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-spa fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Spa & Fitness</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-swimmer fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Sports & Gaming</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-glass-cheers fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">Event & Party</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                <a class="service-item rounded" href="">
-                    <div class="service-icon bg-transparent border rounded p-1">
-                        <div
-                            class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                            <i class="fa fa-dumbbell fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                    <h5 class="mb-3">GYM & Yoga</h5>
-                    <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-                        sed diam stet diam sed stet lorem.</p>
-                </a>
-            </div>
+                        <h5 class="mb-2 text-dark">{{ $service['title'] }}</h5>
+                        <p class="text-muted mb-0">{{ $service['desc'] }}</p>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 </div>
+
+<!-- Custom CSS for hover -->
+<style>
+    .service-item:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+        border-color: #0d6efd !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>

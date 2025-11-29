@@ -344,7 +344,7 @@
 }
 
 
-/*** Testimonial ***/
+/*** Testimonial
 .testimonial {
     background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/carousel-2.jpg);
     background-position: center center;
@@ -392,9 +392,9 @@
     color: var(--primary);
     background: #FFFFFF;
 }
+ ***/
 
-
-/*** Team ***/
+/*** Team 
 .team-item,
 .team-item .bg-primary,
 .team-item .bg-primary i {
@@ -412,7 +412,7 @@
 .team-item:hover .bg-primary i {
     color: var(--secondary) !important;
 }
-
+***/
 
 /*** Footer ***/
 .newsletter {
